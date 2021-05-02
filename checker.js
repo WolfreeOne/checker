@@ -29,12 +29,13 @@
     else
       bad.push(email[i])
   }
-  good.forEach(e => document.write(e + '<br>'))
-  bad.forEach(e => w.document.write(e + '<br>'))
+  good.sort().forEach(e => document.write(e + '<br>'))
+  bad.sort().forEach(e => w.document.write(e + '<br>'))
 })()
 const good = []
 const bad = []
-const email = `
+const email =
+`
 
 2021-05-02@01.04.48.059Z
 hndo394pn9f@gmail.com
@@ -42,4 +43,6 @@ hndo394pn9f@gmail.com
 pr7s4pybsb891tntav@gmail.com
 2021-05-02@01.05.28.101Z
 
-`.split('\n').filter(Boolean)
+`
+.split('\n').filter(Boolean)
+.sort(() => .5 - Math.random())
